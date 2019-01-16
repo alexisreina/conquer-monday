@@ -1,4 +1,5 @@
-# conquer-mondays
+# conquer-monday
+Vue.js version of the Random Quote Machine I create for FreeCodeCamp hosted on [Codepen](https://codepen.io/alexisreina/full/RrKVxg)
 
 ## Project setup
 ```
