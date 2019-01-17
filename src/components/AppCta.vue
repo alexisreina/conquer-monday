@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <div class="cta">
     <slot></slot>
   </div>

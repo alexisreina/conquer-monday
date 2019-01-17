@@ -101,7 +101,6 @@ export default {
 <!-- Global Styles -->
 <style>
 @import url(//fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,300);
-@import url(//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css);
 
 *,
 *::before,

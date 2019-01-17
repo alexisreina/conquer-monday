@@ -2,7 +2,8 @@
   <a
     class="animated"
     target="_blank"
-    :style="{ color: color }"
+    rel="noopener"
+    :style="{ 'color': color }"
   >
     <slot></slot>
   </a>
@@ -11,6 +12,11 @@
 <script>
 export default {
   name: 'AppFooterLink',
-  props: ['color','url',]
+  props: {
+    color: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
