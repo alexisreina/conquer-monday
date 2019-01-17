@@ -9,7 +9,7 @@
     >Alexis Reina</app-footer-link>.
 
     <br />
-    
+
     <span>Colors and Quotes from </span>
 
     <app-footer-link
@@ -17,17 +17,17 @@
       title="Creative Market"
       :color="color"
     >this Creative Market Post</app-footer-link>.
-    
+
     <br />
 
     <span>Twitter icon made by </span>
-    
+
     <app-footer-link
       href="http://www.flaticon.com/authors/elegant-themes"
       title="Elegant Themes"
       :color="color"
     >Elegant Themes</app-footer-link>
-    
+
     <span>from</span>
 
     <app-footer-link
@@ -36,7 +36,7 @@
       title="Flaticon"
       :color="color"
     >www.flaticon.com</app-footer-link>
-    
+
     <span>licensed by </span>
 
     <app-footer-link
@@ -72,4 +72,3 @@ export default {
   color: #66757f
 }
 </style>
-

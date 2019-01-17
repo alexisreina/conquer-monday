@@ -1,6 +1,6 @@
 <template>
-  <button 
-    type="button" 
+  <button
+    type="button"
     class="button animated"
     @click.prevent="onClick"
   >
@@ -39,4 +39,3 @@ export default {
   background-color: white;
 }
 </style>
-

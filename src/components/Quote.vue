@@ -1,7 +1,6 @@
 <template>
   <blockquote class="quote">
     <p class="quote__body" v-html="text"></p>
-    
     <footer class="quote__footer" v-if="author">
       <cite class="quote__cite">
         – {{author}} –
@@ -72,4 +71,3 @@ export default {
   }
 }
 </style>
-

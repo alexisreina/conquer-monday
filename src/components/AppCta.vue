@@ -18,7 +18,7 @@ export default {
 
 @media screen and (min-width: 650px) {
   .cta {
-    margin-top: 6rem;  
+    margin-top: 6rem;
     margin-bottom: 6rem;
   }
 }

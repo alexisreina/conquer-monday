@@ -5,15 +5,15 @@
   >
     <container>
       <quote
-        :text="currentQuote.quote" 
+        :text="currentQuote.quote"
         :author="currentQuote.author"
       />
       <app-cta>
         <button-quote
-          :label="newQuoteLabel" 
+          :label="newQuoteLabel"
           :onClick="onUpdateQuote"
           :color="currentColor"
-        /> 
+        />
       </app-cta>
     </container>
     <app-footer>
@@ -70,7 +70,7 @@ export default {
     }
   },
   methods: {
-    onUpdateQuote() { 
+    onUpdateQuote() {
       this.currentQuote = quotes[randomQuote.new];
       this.currentColor = colors[randomColor.new];
     },
@@ -87,9 +87,9 @@ export default {
       const url = encodeURI(tweet.url + tweet.hashtags + tweet.via + tweet.related + tweet.text);
 
       const title = "";
-      
+
       const options = "resizable=yes,toolbar=no,status=no,location=no,menubar=no,scrollbars=yes"
-      
+
       // Open the tweet window
       // https://developer.mozilla.org/es/docs/Web/API/Window/open
       window.open(url, title, options);

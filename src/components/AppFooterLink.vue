@@ -14,6 +14,3 @@ export default {
   props: ['color','url',]
 }
 </script>
-
-
-

@@ -4,7 +4,7 @@ export default class {
     this.prev = null;
     this.next = null;
   }
-  
+
   get new() {
     while(this.prev === this.next)  {
       this.next = Math.floor(Math.random() * this.max);
