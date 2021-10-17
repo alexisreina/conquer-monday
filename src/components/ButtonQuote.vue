@@ -13,18 +13,14 @@ export default {
     label: {
       type: String,
       required: true,
-      default: "New Quote",
     },
     color: {
       type: String,
       required: true,
-      default: "#8aa651",
     },
     onClick: {
       type: Function,
       required: true,
-      // eslint-disable-next-line
-      default: () => console.log('Quote Button: No handler attached')
     },
   },
 };

@@ -16,8 +16,6 @@ export default {
     onClick: {
       type: Function,
       required: false,
-      // eslint-disable-next-line
-      default: () => console.log('Tweet Button: No handler attached')
     },
   },
 };
