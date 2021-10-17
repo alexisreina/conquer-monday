@@ -1,4 +1,4 @@
-<template functional>
+<template>
   <a class="animated" target="_blank" rel="noopener" :style="{ color: color }">
     <slot></slot>
   </a>
