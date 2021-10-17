@@ -1,6 +1,8 @@
 # conquer-monday
 Vue.js version of the Random Quote Machine I created for FreeCodeCamp hosted on [Codepen](https://codepen.io/alexisreina/full/RrKVxg)
 
+Visit site deployed in netlify: [https://conquer-monday-vue.netlify.app/](https://conquer-monday-vue.netlify.app/)
+
 ## Project setup
 ```
 npm install
