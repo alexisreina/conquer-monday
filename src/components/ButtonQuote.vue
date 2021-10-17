@@ -1,41 +1,38 @@
 <template>
-  <button
-    type="button"
-    class="button animated"
-    @click.prevent="onClick"
-  >
-    <span :style="{ 'color': color }">
-      {{label}}
+  <button type="button" class="button animated" @click.prevent="onClick">
+    <span :style="{ color: color }">
+      {{ label }}
     </span>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'ButtonQuote',
+  name: "ButtonQuote",
   props: {
     label: {
       type: String,
       required: true,
-      default: 'New Quote'
+      default: "New Quote",
     },
     color: {
       type: String,
       required: true,
-      default: '#8aa651'
+      default: "#8aa651",
     },
-    onClick:{
+    onClick: {
       type: Function,
       required: true,
       // eslint-disable-next-line
       default: () => console.log('Quote Button: No handler attached')
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
 .button {
   background-color: white;
+  cursor: pointer;
 }
 </style>

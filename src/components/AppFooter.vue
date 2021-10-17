@@ -1,4 +1,4 @@
-<template functional>
+<template>
   <footer class="page-footer">
     <container>
       <slot></slot>
@@ -7,9 +7,14 @@
 </template>
 
 <script>
+import Container from "@/components/Container.vue";
+
 export default {
-  name: 'AppFooter'
-}
+  name: "AppFooter",
+  components: {
+    Container,
+  },
+};
 </script>
 
 <style scoped>

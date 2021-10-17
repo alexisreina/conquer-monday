@@ -2,28 +2,26 @@
   <blockquote class="quote">
     <p class="quote__body" v-html="text"></p>
     <footer class="quote__footer" v-if="author">
-      <cite class="quote__cite">
-        – {{author}} –
-      </cite>
+      <cite class="quote__cite"> – {{ author }} – </cite>
     </footer>
   </blockquote>
 </template>
 
 <script>
 export default {
-  name: 'Quote',
+  name: "Quote",
   props: {
     text: {
       type: String,
       required: true,
-      default: 'Loading...'
+      default: "Loading...",
     },
     author: {
       type: String,
-      required: false
-    }
-  }
-}
+      required: false,
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -40,7 +38,7 @@ export default {
   font-family: Georgia, serif;
   line-height: 1.5rem;
   content: open-quote;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .quote__body {
@@ -54,7 +52,7 @@ export default {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 112.5%;
-  letter-spacing: 0.085em
+  letter-spacing: 0.085em;
 }
 
 @media screen and (min-width: 650px) {

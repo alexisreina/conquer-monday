@@ -1,13 +1,7 @@
 <template>
-  <main
-    class="page animated"
-    :style="{ backgroundColor: currentColor }"
-  >
+  <main class="page animated" :style="{ backgroundColor: currentColor }">
     <container>
-      <quote
-        :text="currentQuote.quote"
-        :author="currentQuote.author"
-      />
+      <quote :text="currentQuote.quote" :author="currentQuote.author" />
       <app-cta>
         <button-quote
           :label="newQuoteLabel"
@@ -17,10 +11,7 @@
       </app-cta>
     </container>
     <app-footer>
-      <button-twiter
-        :label="tweetLabel"
-        :onClick="composeTweet"
-      >
+      <button-twiter :label="tweetLabel" :onClick="composeTweet">
         <icon-twitter />
       </button-twiter>
       <app-footer-credits :color="currentColor" />
@@ -30,27 +21,27 @@
 
 <script>
 // components
-import Container from '@/components/Container.vue';
-import Quote from '@/components/Quote.vue';
-import ButtonQuote from '@/components/ButtonQuote.vue';
-import ButtonTwiter from '@/components/ButtonTwitter.vue';
-import IconTwitter from '@/components/IconTwitter.vue';
-import AppCta from '@/components/AppCta.vue';
-import AppFooter from './components/AppFooter.vue'
-import AppFooterCredits from '@/components/AppFooterCredits.vue';
+import Container from "@/components/Container.vue";
+import Quote from "@/components/Quote.vue";
+import ButtonQuote from "@/components/ButtonQuote.vue";
+import ButtonTwiter from "@/components/ButtonTwitter.vue";
+import IconTwitter from "@/components/IconTwitter.vue";
+import AppCta from "@/components/AppCta.vue";
+import AppFooter from "./components/AppFooter.vue";
+import AppFooterCredits from "@/components/AppFooterCredits.vue";
 
 // data
-import quotes from '@/data/quotes';
-import colors from '@/data/colors';
+import quotes from "@/data/quotes";
+import colors from "@/data/colors";
 
 // lib
-import Random from '@/lib/Random';
+import Random from "@/lib/Random";
 
 const randomQuote = new Random(quotes.length);
 const randomColor = new Random(colors.length);
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Container,
     Quote,
@@ -59,15 +50,15 @@ export default {
     IconTwitter,
     AppCta,
     AppFooter,
-    AppFooterCredits
+    AppFooterCredits,
   },
   data() {
     return {
       currentQuote: quotes[randomQuote.new],
       currentColor: colors[randomColor.new],
-      tweetLabel: 'Tweet This',
-      newQuoteLabel: 'Conquer Monday',
-    }
+      tweetLabel: "Tweet This",
+      newQuoteLabel: "Conquer Monday",
+    };
   },
   methods: {
     onUpdateQuote() {
@@ -81,21 +72,24 @@ export default {
         via: "via=AlexisReina&",
         hashtags: "hashtags=freecodeamp,quotemachine&",
         related: "related=@CreativeMarket&",
-        text: "text=" + this.currentQuote.quote.replace(/<br>|\s/g, ' ')
+        text: "text=" + this.currentQuote.quote.replace(/<br>|\s/g, " "),
       };
 
-      const url = encodeURI(tweet.url + tweet.hashtags + tweet.via + tweet.related + tweet.text);
+      const url = encodeURI(
+        tweet.url + tweet.hashtags + tweet.via + tweet.related + tweet.text
+      );
 
       const title = "";
 
-      const options = "resizable=yes,toolbar=no,status=no,location=no,menubar=no,scrollbars=yes"
+      const options =
+        "resizable=yes,toolbar=no,status=no,location=no,menubar=no,scrollbars=yes";
 
       // Open the tweet window
       // https://developer.mozilla.org/es/docs/Web/API/Window/open
       window.open(url, title, options);
     },
-  }
-}
+  },
+};
 </script>
 
 <!-- Global Styles -->
@@ -119,7 +113,9 @@ html {
   font: normal 100%/1.5 Montserrat, sans-serif;
 }
 
-blockquote,p,cite {
+blockquote,
+p,
+cite {
   display: block;
   margin: 0;
   padding: 0;

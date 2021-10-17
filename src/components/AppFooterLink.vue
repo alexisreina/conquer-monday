@@ -1,22 +1,17 @@
-<template>
-  <a
-    class="animated"
-    target="_blank"
-    rel="noopener"
-    :style="{ 'color': color }"
-  >
+<template functional>
+  <a class="animated" target="_blank" rel="noopener" :style="{ color: color }">
     <slot></slot>
   </a>
 </template>
 
 <script>
 export default {
-  name: 'AppFooterLink',
+  name: "AppFooterLink",
   props: {
     color: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

@@ -6,7 +6,7 @@ export default class {
   }
 
   get new() {
-    while(this.prev === this.next)  {
+    while (this.prev === this.next) {
       this.next = Math.floor(Math.random() * this.max);
     }
     this.prev = this.next;

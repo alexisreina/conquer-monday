@@ -1,26 +1,26 @@
 <template>
   <button class="button" @click="onClick">
     <slot class="icon"></slot>
-    {{label}}
+    {{ label }}
   </button>
 </template>
 
 <script>
 export default {
-  name: 'ButtonTwitter',
+  name: "ButtonTwitter",
   props: {
     label: {
       type: String,
-      required: true
+      required: true,
     },
     onClick: {
       type: Function,
       required: false,
       // eslint-disable-next-line
       default: () => console.log('Tweet Button: No handler attached')
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -29,6 +29,7 @@ export default {
   background-color: #55acee;
   color: white;
   padding-left: 48px;
+  cursor: pointer;
 }
 
 .icon {

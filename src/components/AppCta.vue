@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: 'AppCta'
-}
+  name: "AppCta",
+};
 </script>
 
 <style scoped>
