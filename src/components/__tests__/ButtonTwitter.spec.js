@@ -16,4 +16,10 @@ describe("ButtonTwitter.vue", () => {
     const wrapper = mount(ButtonTwitter, { propsData: { label } });
     expect(wrapper.text()).toMatch(label);
   });
+
+  it("emits click when clicked", async () => {
+    const wrapper = mount(ButtonTwitter, { propsData: { label: "Label" } });
+    await wrapper.trigger("click");
+    expect(wrapper.emitted("click")).toBeTruthy();
+  });
 });

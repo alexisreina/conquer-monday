@@ -11,7 +11,7 @@
       </app-cta>
     </container>
     <app-footer>
-      <button-twiter :label="tweetLabel" :onClick="composeTweet">
+      <button-twiter :label="tweetLabel" @click="composeTweet">
         <icon-twitter />
       </button-twiter>
       <app-footer-credits :color="currentColor" />
