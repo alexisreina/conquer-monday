@@ -5,8 +5,8 @@
       <app-cta>
         <button-quote
           :label="newQuoteLabel"
-          :onClick="onUpdateQuote"
           :color="currentColor"
+          @click="onUpdateQuote"
         />
       </app-cta>
     </container>

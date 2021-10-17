@@ -18,9 +18,10 @@ export default {
       type: String,
       required: true,
     },
-    onClick: {
-      type: Function,
-      required: true,
+  },
+  methods: {
+    onClick() {
+      this.$emit("click");
     },
   },
 };
